@@ -3,6 +3,7 @@
 // global object
 T = {} ;
 T.timerDiv = document.getElementById('timer');
+T1.timerDiv = document.getElementById('timer1');
 
 function displayTimer() {
   // initilized all local variables:
@@ -99,4 +100,4 @@ function clearTimer() {
 }
 
 
-displayTimer1 = displayTimer
+T1.timerDiv = T.timerDiv
