@@ -2,6 +2,7 @@
 
 // global object
 T = {} ;
+T1 = {} ;
 T.timerDiv = document.getElementById('timer');
 T1.timerDiv = document.getElementById('timer1');
 
