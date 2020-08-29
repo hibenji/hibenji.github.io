@@ -110,4 +110,4 @@ function clearTimer() {
   document.getElementById('go').style.display="none";
   document.getElementById('stop').style.display="inline";
   document.getElementById('clear').style.display="none";
-}
+
