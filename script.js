@@ -133,7 +133,7 @@ function displayTimer1() {
 
   // minutes
   if(T1.difference > 60000) {
-    minutes1 = Math.floor(T.difference/60000);
+    minutes1 = Math.floor(T1.difference/60000);
     if (minutes1 > 60) {
       minutes1 = minutes1 % 60;
     }
