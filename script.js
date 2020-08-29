@@ -37,7 +37,7 @@ function displayTimer() {
   }
 
   time  =  hours   + ':'
-  time += minutes + ':'
+  time += minutes;
 
   T.timerDiv.innerHTML = time;
 }
@@ -78,4 +78,10 @@ function clearTimer() {
   document.getElementById('go').style.display="inline";
   document.getElementById('clear').style.display="none";
 }
+
+
+
+  T1.timerInterval = setInterval(function() {
+    displayTimer()
+  }, 10);
 
