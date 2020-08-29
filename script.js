@@ -107,7 +107,7 @@ function clearTimer() {
 function displayTimer1() {
   // initilized all local variables:
   var hours1='00', minutes1='00',
-  milisecond1=0, seconds1='00',
+  miliseconds1=0, seconds1='00',
   time1 = '',
   timeNow1 = new Date().getTime(); // timestamp (miliseconds)
 
