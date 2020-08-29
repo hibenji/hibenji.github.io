@@ -111,7 +111,7 @@ function displayTimer1() {
   time1 = '',
   timeNow1 = new Date().getTime(); // timestamp (miliseconds)
 
-  T1.difference = timeNow - T1.timerStarted;
+  T1.difference = timeNow1 - T1.timerStarted;
 
   // milliseconds
   if(T1.difference > 10) {
