@@ -53,6 +53,7 @@ function startTimer() {
   // update timer periodically
   T.timerInterval = setInterval(function() {
     displayTimer()
+	console.log('T.timerStarted: '+T.timerStarted)
   }, 10);
 
   // show / hide the relevant buttons:
