@@ -106,8 +106,3 @@ function clearTimer() {
     displayTimer1()
   }, 10);
 
-  // show / hide the relevant buttons:
-  document.getElementById('go').style.display="none";
-  document.getElementById('stop').style.display="inline";
-  document.getElementById('clear').style.display="none";
-
