@@ -181,23 +181,6 @@ function startTimer() {
   document.getElementById('clear').style.display="none";
 }
 
-function stopTimer() {
-  clearInterval(T1.timerInterval); // stop updating the timer
-
-  document.getElementById('stop').style.display="none";
-  document.getElementById('go').style.display="inline";
-  document.getElementById('clear').style.display="inline";
-}
-
-function clearTimer() {
-  clearInterval(T1.timerInterval);
-  T1.timerDiv.innerHTML = "00:00:00:00"; // reset timer to all zeros
-  T1.difference = 0;
-
-  document.getElementById('stop').style.display="none";
-  document.getElementById('go').style.display="inline";
-  document.getElementById('clear').style.display="none";
-}
 
 
 
