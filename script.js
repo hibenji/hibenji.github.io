@@ -97,3 +97,40 @@ function clearTimer() {
   document.getElementById('go').style.display="inline";
   document.getElementById('clear').style.display="none";
 }
+
+function startTimer1() {
+  // save start time
+  T.timerStarted = new Date().getTime()
+  console.log('T.timerStarted: '+T.timerStarted)
+
+  if (T.difference > 0) {
+    T.timerStarted = T.timerStarted - T.difference
+  }
+  // update timer periodically
+  T.timerInterval = setInterval(function() {
+    displayTimer()
+  }, 10);
+
+  // show / hide the relevant buttons:
+  document.getElementById('go').style.display="none";
+  document.getElementById('stop').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+
+function stopTimer1() {
+  clearInterval(T.timerInterval); // stop updating the timer
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="inline";
+}
+
+function clearTimer1() {
+  clearInterval(T.timerInterval);
+  T.timerDiv.innerHTML = "00:00:00:00"; // reset timer to all zeros
+  T.difference = 0;
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
