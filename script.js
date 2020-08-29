@@ -162,6 +162,44 @@ function displayTimer1() {
 }
 
 
+function startTimer() {
+  // save start time
+  T1.timerStarted = new Date().getTime()
+  console.log('T1.timerStarted: '+T1.timerStarted)
+
+  if (T1.difference > 0) {
+    T1.timerStarted = T1.timerStarted - T1.difference
+  }
+  // update timer periodically
+  T1.timerInterval = setInterval(function() {
+    displayTimer1()
+  }, 10);
+
+  // show / hide the relevant buttons:
+  document.getElementById('go').style.display="none";
+  document.getElementById('stop').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+
+function stopTimer() {
+  clearInterval(T1.timerInterval); // stop updating the timer
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="inline";
+}
+
+function clearTimer() {
+  clearInterval(T1.timerInterval);
+  T1.timerDiv.innerHTML = "00:00:00:00"; // reset timer to all zeros
+  T1.difference = 0;
+
+  document.getElementById('stop').style.display="none";
+  document.getElementById('go').style.display="inline";
+  document.getElementById('clear').style.display="none";
+}
+
+
 
 
 
