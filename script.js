@@ -102,4 +102,5 @@ function clearTimer() {
 
 
   T.timerInterval = setInterval(function() {
-    displayTimer2()
+    displayTimer()
+  }, 10);
