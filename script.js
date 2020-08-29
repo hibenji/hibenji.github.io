@@ -79,9 +79,3 @@ function clearTimer() {
   document.getElementById('clear').style.display="none";
 }
 
-
-
-  T1.timerInterval = setInterval(function() {
-    displayTimer()
-  }, 10);
-
