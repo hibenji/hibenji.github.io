@@ -158,7 +158,7 @@ function displayTimer1() {
   time1 += seconds1 + ':'
   time1 += miliseconds1;
 
-  T.timerDiv.innerHTML = time;
+  T1.timerDiv.innerHTML = time1;
 }
 
 
