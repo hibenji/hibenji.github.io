@@ -164,7 +164,7 @@ function displayTimer1() {
 function startTimer1() {
   // save start time
   T1.timerStarted = new Date().getTime()
-  console.log('T.timerStarted: '+T.timerStarted)
+  console.log('T1.timerStarted: '+T1.timerStarted)
 
   if (T.difference > 0) {
     T1.timerStarted = T1.timerStarted - T1.difference
