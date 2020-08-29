@@ -106,57 +106,57 @@ function clearTimer() {
 
 function displayTimer1() {
   // initilized all local variables:
-  var hours='00', minutes='00',
-  milisecond1=0, seconds='00',
-  time = '',
-  timeNow = new Date().getTime(); // timestamp (miliseconds)
+  var hours1='00', minutes1='00',
+  milisecond1=0, seconds1='00',
+  time1 = '',
+  timeNow1 = new Date().getTime(); // timestamp (miliseconds)
 
-  T.difference = timeNow - T.timerStarted;
+  T1.difference = timeNow1 - T1.timerStarted;
 
   // milliseconds
-  if(T.difference > 10) {
-    miliseconds = Math.floor((T.difference % 1000) / 10);
-    if(miliseconds < 10) {
-      miliseconds = '0'+String(miliseconds);
+  if(T1.difference > 10) {
+    miliseconds1 = Math.floor((T1.difference % 1000) / 10);
+    if(miliseconds1 < 10) {
+      miliseconds1 = '0'+String(miliseconds1);
     }
   }
   // seconds
-  if(T.difference > 1000) {
-    seconds = Math.floor(T.difference / 1000);
-    if (seconds > 60) {
-      seconds = seconds % 60;
+  if(T1.difference > 1000) {
+    seconds1 = Math.floor(T1.difference / 1000);
+    if (seconds1 > 60) {
+      seconds1 = seconds1 % 60;
     }
-    if(seconds < 10) {
-      seconds = '0'+String(seconds);
+    if(seconds1 < 10) {
+      seconds1 = '0'+String(seconds1);
     }
   }
 
   // minutes
-  if(T.difference > 60000) {
-    minutes = Math.floor(T.difference/60000);
-    if (minutes > 60) {
-      minutes = minutes % 60;
+  if(T1.difference > 60000) {
+    minutes1 = Math.floor(T.difference/60000);
+    if (minutes1 > 60) {
+      minutes1 = minutes1 % 60;
     }
-    if(minutes < 10) {
-      minutes = '0'+String(minutes);
+    if(minutes1 < 10) {
+      minutes1 = '0'+String(minutes1);
     }
   }
 
   // hours
-  if(T.difference > 3600000) {
-    hours = Math.floor(T.difference/3600000);
+  if(T1.difference > 3600000) {
+    hours1 = Math.floor(T1.difference/3600000);
     // if (hours > 24) {
     // 	hours = hours % 24;
     // }
-    if(hours < 10) {
-      hours = '0'+String(hours);
+    if(hours1 < 10) {
+      hours1 = '0'+String(hours1);
     }
   }
 
-  time  =  hours   + ':'
-  time += minutes + ':'
-  time += seconds + ':'
-  time += miliseconds;
+  time1  =  hours1   + ':'
+  time1 += minutes1 + ':'
+  time1 += seconds1 + ':'
+  time1 += miliseconds1;
 
   T.timerDiv.innerHTML = time;
 }
