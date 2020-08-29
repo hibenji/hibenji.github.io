@@ -101,6 +101,72 @@ function clearTimer() {
 }
 
 
+
+
+
+function displayTimer1() {
+  // initilized all local variables:
+  var hours='00', minutes='00',
+  milisecond1=0, seconds='00',
+  time = '',
+  timeNow = new Date().getTime(); // timestamp (miliseconds)
+
+  T.difference = timeNow - T.timerStarted;
+
+  // milliseconds
+  if(T.difference > 10) {
+    miliseconds = Math.floor((T.difference % 1000) / 10);
+    if(miliseconds < 10) {
+      miliseconds = '0'+String(miliseconds);
+    }
+  }
+  // seconds
+  if(T.difference > 1000) {
+    seconds = Math.floor(T.difference / 1000);
+    if (seconds > 60) {
+      seconds = seconds % 60;
+    }
+    if(seconds < 10) {
+      seconds = '0'+String(seconds);
+    }
+  }
+
+  // minutes
+  if(T.difference > 60000) {
+    minutes = Math.floor(T.difference/60000);
+    if (minutes > 60) {
+      minutes = minutes % 60;
+    }
+    if(minutes < 10) {
+      minutes = '0'+String(minutes);
+    }
+  }
+
+  // hours
+  if(T.difference > 3600000) {
+    hours = Math.floor(T.difference/3600000);
+    // if (hours > 24) {
+    // 	hours = hours % 24;
+    // }
+    if(hours < 10) {
+      hours = '0'+String(hours);
+    }
+  }
+
+  time  =  hours   + ':'
+  time += minutes + ':'
+  time += seconds + ':'
+  time += miliseconds;
+
+  T.timerDiv.innerHTML = time;
+}
+
+
+
+
+
+
+
   T.timerInterval = setInterval(function() {
     displayTimer1()
   }, 10);
