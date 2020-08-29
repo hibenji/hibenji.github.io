@@ -162,15 +162,7 @@ function displayTimer1() {
 }
 
 
-function startTimer() {
-  // save start time
-  T1.timerStarted = new Date().getTime()
-  console.log('T1.timerStarted: '+T1.timerStarted)
 
-  if (T1.difference > 0) {
-    T1.timerStarted = T1.timerStarted - T1.difference
-  }
-  // update timer periodically
   T1.timerInterval = setInterval(function() {
     displayTimer1()
   }, 10);
