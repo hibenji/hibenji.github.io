@@ -101,4 +101,5 @@ function clearTimer() {
 }
 
 
-T1.timerDiv = T.timerDiv
+  T.timerInterval = setInterval(function() {
+    displayTimer2()
